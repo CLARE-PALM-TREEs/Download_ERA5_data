@@ -30,9 +30,9 @@ A repository for code to download ERA5 data from the Copernicus data portal
    
 8. Move into the Download_ERA5_data directory and:
    
-   a) Edit the script download_hourly_ERA5_data.py as desired for your needs
+   a) Edit the script **download_hourly_ERA5_data.py** as desired for your needs
    
-   b) Edit the batch script lotus_download_hourly_ERA5_data to email you when the script starts and finishes and to save a log file (make a directory called lotus_output in your home space to store the log files)
+   b) Edit the batch script **lotus_download_hourly_ERA5_data** to email you when the script starts and finishes and to save a log file (make a directory called lotus_output in your home space to store the log files)
    
    c) Run the batch script:
    
