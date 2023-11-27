@@ -3,40 +3,37 @@ A repository for code to download ERA5 data from the Copernicus data portal
 
 ***Instructions for setting up access through the cdsapi:***
 
-1. Create a CDS account from https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5
+1. Create a CDS account from https://cds.climate.copernicus.eu/user/register and log in
+   
+3. In your home directory on JASMIN, create a file called .cdsapirc by:
 
-2. If you are not already set up to use conda, download the miniconda installer: 
-    
-   `wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh`
-    
-3. Create a base environment: 
-    
-   `bash Miniconda3-latest-Linux-x86_64.sh`
-    
-4. Activate the base environment: 
-    
-   `source ~/miniconda3/bin/activate`
+   `emacs .cdsapirc`
 
-5. Clone this repository in your code workspace location:
+3. Add the lines below to your file:
+
+    url: https://cds.climate.copernicus.eu/api/v2
+    key: {uid}:{api-key}
+
+4. Save the file (Ctrl-c then Ctrl-s), then exit (Ctrl-x then Ctrl-c)
+
+5. Install the Climate Data Store api:
+  
+   `pip install cdsapi`
+
+6. Load jaspy:
+   
+   `module load jaspy/3.7` 
+
+7. Clone this repository in your code workspace location:
 
    `git clone https://github.com/CLARE-PALM-TREEs/Download_ERA5_data.git`
    
-6. Move into the Download_ERA5_data directory and create a new conda environment called cds_download:
-    
-   `conda create --name cds_download --file cds_download.lock`
-
-7. Add iris to the conda environment:
-    
-   `conda install -c conda-forge iris`
-
-8. To run code when set up from the terminal:
-
-   a) Activate the environment:
+8. Move into the Download_ERA5_data directory and:
    
-   `conda activate cds_download`
-
-   b) Edit the script download_hourly_ERA5_data.py as desired for your needs
-
-   c) Run the script
+   a) Edit the script download_hourly_ERA5_data.py as desired for your needs
    
-   `python download_hourly_ERA5_data.py`
+   b) Edit the batch script lotus_download_hourly_ERA5_data to email you when the script starts and finishes and to save a log file (make a directory called lotus_output in your home space to store the log files)
+   
+   c) Run the batch script:
+   
+   `sbatch lotus_download_hourly_ERA5_data`
