@@ -61,7 +61,7 @@ latitude_max = 61.0 # northernmost latitude
 longitude_min = -11.0 # westernmost longitude
 longitude_max = 2.0 # easternmost longitude
 
-output_path = '/project/applied/Data/'
+output_path = '/home/users/cbradsha/ERA5_data/'
 
 download_ERA5_hourly_master.download_data(var_name, start_year, start_month, start_day,
                                          end_year, end_month, end_day, dataset, latitude_min=latitude_min,
