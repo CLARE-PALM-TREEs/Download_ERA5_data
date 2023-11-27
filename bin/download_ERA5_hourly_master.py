@@ -11,7 +11,7 @@ import os
 from os import path
 import cdsapi
 from calendar import isleap
-import variables_list as variables
+from bin import variables_list as variables
 import iris
 
 c = cdsapi.Client(url='https://cds.climate.copernicus.eu/api/v2', key='169329:302ac45c-4e5d-4430-b620-83cc455a3fa9')
