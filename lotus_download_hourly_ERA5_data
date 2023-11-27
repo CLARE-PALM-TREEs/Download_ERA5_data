@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#SBATCH --mem=20G
+#SBATCH --qos=normal
+#SBATCH --time=360
+#SBATCH --ntasks=1
+#SBATCH --output=/home/users/cbradsha/lotus_outputs/slurm-%j.out
+#SBATCH --mail-user=catherine.bradshaw@metoffice.gov.uk
+#SBATCH --mail-type=ALL
+export PYTHONPATH=/home/users/cbradsha/workspace/Download_ERA5_data
+module load jaspy
+python -u /home/users/cbradsha/workspace/Download_ERA5_data/download_hourly_ERA5_data.py
