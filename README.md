@@ -20,15 +20,11 @@ A repository for code to download ERA5 data from the Copernicus data portal
   
    `pip install cdsapi`
 
-6. Load jaspy:
-   
-   `module load jaspy/3.7` 
-
-7. Clone this repository in your code workspace location:
+6. Clone this repository in your code workspace location:
 
    `git clone https://github.com/CLARE-PALM-TREEs/Download_ERA5_data.git`
    
-8. Move into the Download_ERA5_data directory and:
+7. Move into the Download_ERA5_data directory and:
    
    a) Edit the script **download_hourly_ERA5_data.py** as desired for your needs
    
