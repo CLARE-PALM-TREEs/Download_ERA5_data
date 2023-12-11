@@ -7,27 +7,6 @@ Created: 30/11/2022
 
 code to download hourly global ERA5 data
 
-Instructions
-for setting up access through the cdsapi:
-
-    1.
-    Create a CDS account from https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5
-
-    2. 
-    If you are not already set up to use conda, download the miniconda installer: 
-    $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-    Then create a base environment: 
-    $ bash Miniconda3-latest-Linux-x86_64.sh
-    Then activate the base environment: $ source ~/miniconda3/bin/activate
-
-    3.
-    Create a new conda environment called cds_download:
-    > conda create --name cds_download --file cds_download.lock
-
-    4. To run code when set up from the terminal:
-    > conda activate cds_download
-    > python download_hourly_ERA5_data.py
-
 '''
 from bin import download_ERA5_hourly_master
 
@@ -61,7 +40,7 @@ latitude_max = 61.0 # northernmost latitude
 longitude_min = -11.0 # westernmost longitude
 longitude_max = 2.0 # easternmost longitude
 
-output_path = '/home/users/cbradsha/ERA5_data/'
+output_path = '/gws/nopw/j04/palmtrees/reanalysis/'
 
 download_ERA5_hourly_master.download_data(var_name, start_year, start_month, start_day,
                                          end_year, end_month, end_day, dataset, latitude_min=latitude_min,

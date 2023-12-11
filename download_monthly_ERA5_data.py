@@ -5,33 +5,7 @@ Language: Python 3
 Created: 30/11/2022
 --------------------------------------------------------------------------------------------------------
 
-code to download hourly global ERA5 data to the /project/applied/Data/ERA5/hourly directory
-
-Note: You need to have the ERA5_download_processing library in your PYTHONPATH, a central copy exists at /project/applied/SharedResources
-
-Instructions
-for setting up access through the cdsapi:
-
-    1.
-    Create a CDS account from https://confluence.ecmwf.int/display/CKB/How+to+download+ERA5
-
-    2.
-    Follow the instructions for setting up conda if you have not already done so
-    (see https://metoffice.sharepoint.com/sites/TechnologyCommsSite/SitePages/Tooling/Artifactory/Authenticating-Conda-with-Artifactory.aspx
-    and Conda for Scientists.pptx
-    or Conda for Scientists.pptx)
-
-    3.
-    Enter into a terminal window in your homespace the command:
-    > conda create --name cds_download --file cds_download.lock
-
-    4. To run code when set up from the terminal:
-    > conda activate cds_download
-    > python get_ERA5_using_conda.py
-
-HISTORY:
-
-30/11/2022 (CB) - original
+code to download monthly ERA5 data
 '''
 import sys
 import os
