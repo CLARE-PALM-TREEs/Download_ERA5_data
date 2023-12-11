@@ -50,7 +50,7 @@ def download_data(var_name: str, start_year: int, start_month: int,
     if start_date == end_date:
         raise ValueError(f'Start and end date are equal. Cannot get a range')
 
-    output_path = '/project/applied/Data/'
+    output_path = '/gws/nopw/j04/palmtrees/reanalysis/'
     if var_info.time_invariant:
         target_path = f'{output_path}{dataset}/time_invariant/'
         if not path.exists(target_path):
