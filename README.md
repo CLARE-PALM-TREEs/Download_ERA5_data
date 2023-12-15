@@ -5,16 +5,20 @@ A repository for code to download ERA5 data from the Copernicus data portal
 
 1. Create a CDS account from https://cds.climate.copernicus.eu/user/register and log in
    
-3. In your home directory on JASMIN, create a file called .cdsapirc by:
+3. In your home directory on JASMIN, create a file called .cdsapirc by emacs or vi:
 
    `emacs .cdsapirc`
 
-3. Add the lines below to your file:
+   or
+
+   `vi .cdsapirc`
+
+3. Add the lines below to your file (for vi press i first to allow text insert and then Esc key to stop editing):
 
     url: https://cds.climate.copernicus.eu/api/v2
     key: {uid}:{api-key}
 
-4. Save the file (Ctrl-c then Ctrl-s), then exit (Ctrl-x then Ctrl-c)
+4. Save the file Emacs: (Ctrl-c then Ctrl-s), then exit (Ctrl-x then Ctrl-c), vi: Make sure Esc has been pressed, then type :wq
 
 5. Install the Climate Data Store api:
   
