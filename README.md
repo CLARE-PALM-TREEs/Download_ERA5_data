@@ -13,7 +13,7 @@ A repository for code to download ERA5 data from the Copernicus data portal
 
    `vi .cdsapirc`
 
-3. Add the lines below to your file (for vi press i first to allow text insert and then Esc key to stop editing):
+3. Add the lines below to your file (for vi press i first to allow text insert, add the text, and then Esc key to stop editing):
 
     url: https://cds.climate.copernicus.eu/api/v2
     key: {uid}:{api-key}
